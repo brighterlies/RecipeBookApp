@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_app">#FFF0F0F0</color>
+    <color name="primary">#FF6650a4</color>
+    <color name="secondary">#FF625b71</color>
+    <color name="tertiary">#FF7D5260</color>
+    <color name="background">#FF434343</color>
+    <color name="surface">#FFF0F0F0</color>
+    <color name="hintText">#78909C</color>
+    <color name="titleText">#DCF3FB</color>
+    <color name="textView">#616161</color>
+    <color name="textColor">#FF6650a4</color>
+    <color name="fullColor">#FF625b71</color>
+</resources>
