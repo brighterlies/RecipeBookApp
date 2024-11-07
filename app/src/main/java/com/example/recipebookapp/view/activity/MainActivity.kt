@@ -52,24 +52,8 @@ class MainActivity : AppCompatActivity() {
             binding.tvTitle.isVisible = false
             binding.etSearch.isVisible = true
             binding.btnBack.isVisible = false
+            searchRecipe()
         }
-        binding.etSearch.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                //
-            }
-
-            override fun onTextChanged(char: CharSequence?, start: Int, before: Int, count: Int) {
-                if (char != null) {
-                    lifecycleScope.launch {
-                        recipeViewModel.filterRecipesList(char)
-                    }
-                }
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                //
-            }
-        })
         navigateToDetailRecipe()
     }
 
@@ -81,6 +65,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToDetailRecipe() {
+        setCurrentFragment(recipeDetailFragment)
         updateUIVisibility(recipeDetailFragment)
         recipeListFragment.navigateToDetailRecipe()
     }
@@ -127,7 +112,6 @@ class MainActivity : AppCompatActivity() {
                 binding.ivSearch.isVisible = true
                 binding.etSearch.isVisible = false
             }
-
             is RecipeDetailFragment -> {
                 binding.btnBack.isVisible = true
                 binding.btnAdd.isVisible = false

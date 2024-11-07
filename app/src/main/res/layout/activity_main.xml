@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_recipe_app"
     tools:context=".view.activity.MainActivity">
 
     <LinearLayout
@@ -14,9 +14,9 @@
         android:layout_height="60dp"
         android:background="@color/grey_app"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/ivSearch"
@@ -39,10 +39,10 @@
             android:layout_height="match_parent"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:textSize="24sp"
             android:gravity="center"
             android:textAlignment="center"
-            android:textColor="@color/textView"
+            android:textColor="@color/surface"
+            android:textSize="24sp"
             tools:text="@string/app_name_clean" />
 
         <EditText
@@ -50,10 +50,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
-            android:inputType="text"
+            android:background="@drawable/edit_text_background"
             android:hint="@string/search_hint"
+            android:inputType="text"
             android:padding="8dp"
-            android:background="@drawable/edit_text_background" />
+            android:textColor="@color/titleText" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -68,7 +69,7 @@
         android:id="@+id/frameLayoutFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

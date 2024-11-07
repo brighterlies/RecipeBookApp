@@ -19,10 +19,8 @@ class RecipeDetailFragment : Fragment() {
     private var _binding: FragmentRecipeDetailBinding? = null
     private val binding get() = _binding!!
     private val recipeId by lazy { arguments?.getInt("recipeId") ?: -1 }
-    //private val recipeId = arguments?.getInt("recipeId", -1) ?: -1
 
     private val recipeDetailViewModel: RecipeViewModel by activityViewModels()
-    //private val recipeListFragment: RecipeListFragment = RecipeListFragment()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
