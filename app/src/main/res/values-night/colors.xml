@@ -4,4 +4,5 @@
     <color name="background">#FF434343</color>
     <color name="surface">#FFF0F0F0</color>
     <color name="hintText">#78909C</color>
+    <color name="transparent">#00000000</color>
 </resources>

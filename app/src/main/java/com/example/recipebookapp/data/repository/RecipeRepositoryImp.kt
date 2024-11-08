@@ -93,7 +93,6 @@ class RecipeRepositoryImp : RecipeRepository {
                 recipe.title.contains(charSequence, ignoreCase = true)
                         || recipe.description.contains(charSequence, ignoreCase = true)
             }
-            println(recipesFiltered)
             _recipes.postValue(recipeEntityToRecipeList(recipesFiltered))
         }
         return recipes

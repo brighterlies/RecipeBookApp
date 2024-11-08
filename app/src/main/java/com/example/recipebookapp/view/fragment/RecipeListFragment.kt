@@ -99,7 +99,6 @@ class RecipeListFragment : Fragment() {
     private fun searchRecipe() {
         binding.etSearch.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
             }
 
             override fun onTextChanged(char: CharSequence?, start: Int, before: Int, count: Int) {
@@ -112,7 +111,6 @@ class RecipeListFragment : Fragment() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-
             }
         })
     }
