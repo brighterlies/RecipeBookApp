@@ -18,12 +18,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
-    private val newRecipeFragment = NewRecipeFragment()
-    private val recipeDetailFragment = RecipeDetailFragment()
     private val recipeListFragment = RecipeListFragment()
-
-    private val recipeViewModel: RecipeViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,83 +37,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUIListener() {
-        binding.btnAdd.setOnClickListener {
-            navigateToNewRecipeFragment()
-        }
-        binding.btnBack.setOnClickListener {
+        binding.ivHome.setOnClickListener {
             startRecipeListFragment()
         }
-        binding.ivSearch.setOnClickListener {
-            binding.tvTitle.isVisible = false
-            binding.etSearch.isVisible = true
-            binding.btnBack.isVisible = false
-            searchRecipe()
-        }
-        navigateToDetailRecipe()
-    }
-
-    private fun navigateToNewRecipeFragment() {
-        val auxTitle = "New Recipe"
-        binding.tvTitle.text = auxTitle
-        updateUIVisibility(newRecipeFragment)
-        setCurrentFragment(newRecipeFragment)
-    }
-
-    private fun navigateToDetailRecipe() {
-        setCurrentFragment(recipeDetailFragment)
-        updateUIVisibility(recipeDetailFragment)
-        recipeListFragment.navigateToDetailRecipe()
     }
 
     private fun startRecipeListFragment() {
-        val auxTitle = "Recipe Book App"
-        binding.tvTitle.text = auxTitle
-        updateUIVisibility(recipeListFragment)
         setCurrentFragment(recipeListFragment)
-    }
-
-    private fun searchRecipe() {
-        binding.etSearch.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                //
-            }
-
-            override fun onTextChanged(char: CharSequence?, start: Int, before: Int, count: Int) {
-                if (char != null) {
-                    lifecycleScope.launch {
-                        recipeViewModel.filterRecipesList(char)
-                    }
-                }
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                //
-            }
-        })
-    }
-
-    private fun updateUIVisibility(fragment: Fragment) {
-        when (fragment) {
-            is NewRecipeFragment -> {
-                binding.btnBack.isVisible = true
-                binding.btnAdd.isVisible = false
-                binding.ivSearch.isVisible = false
-                binding.etSearch.isVisible = false
-            }
-
-            is RecipeListFragment -> {
-                binding.btnBack.isVisible = false
-                binding.btnAdd.isVisible = true
-                binding.ivSearch.isVisible = true
-                binding.etSearch.isVisible = false
-            }
-            is RecipeDetailFragment -> {
-                binding.btnBack.isVisible = true
-                binding.btnAdd.isVisible = false
-                binding.ivSearch.isVisible = false
-                binding.etSearch.isVisible = false
-            }
-        }
     }
 
     private fun setCurrentFragment(fragment: Fragment) {

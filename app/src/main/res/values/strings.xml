@@ -23,6 +23,7 @@
     <string name="back">back page</string>
     <string name="newRecipe_RecipeTime">Recipe Time:</string>
     <string name="newRecipe_etTime">Recipe Time Here</string>
+    <string name="home">Home</string>
     <string-array name="cuisine_array">
         <item>""</item>
         <item>American</item>

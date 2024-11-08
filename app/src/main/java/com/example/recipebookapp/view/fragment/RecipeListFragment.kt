@@ -23,6 +23,7 @@ class RecipeListFragment : Fragment() {
     private val binding get() = _binding!!
     private val recipeListAdapter: RecipeListAdapter = RecipeListAdapter()
     private val recipeListViewModel: RecipeViewModel by activityViewModels()
+    private val newRecipeFragment = NewRecipeFragment()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,6 +46,10 @@ class RecipeListFragment : Fragment() {
 
     private fun initUIListener() {
         deleteRecipe()
+        binding.fabNewRecipe.setOnClickListener {
+            navigateToNewRecipeFragment()
+        }
+        navigateToDetailRecipe()
     }
 
     private fun startRecyclerView() {
@@ -71,7 +76,11 @@ class RecipeListFragment : Fragment() {
         }
     }
 
-    fun navigateToDetailRecipe() {
+    private fun navigateToNewRecipeFragment() {
+        setCurrentFragment(newRecipeFragment)
+    }
+
+    private fun navigateToDetailRecipe() {
         recipeListAdapter.onClick = { itemId ->
             val bundle = bundleOf("recipeId" to itemId)
             val recipeDetailFragment = RecipeDetailFragment()

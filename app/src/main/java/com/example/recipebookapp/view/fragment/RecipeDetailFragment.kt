@@ -29,7 +29,6 @@ class RecipeDetailFragment : Fragment() {
         _binding = FragmentRecipeDetailBinding.inflate(inflater, container, false)
         println("recreational: $recipeId")
         initUI()
-
         return binding.root
     }
 
@@ -43,7 +42,6 @@ class RecipeDetailFragment : Fragment() {
     }
 
     private fun initUIListener() {
-
     }
 
     private fun getRecipe(id: Int) {
@@ -73,13 +71,6 @@ class RecipeDetailFragment : Fragment() {
         binding.tvRecipeDirections.text = recipeModel.directions
         if (recipeModel.photoUrl.isNotEmpty()) {
             Picasso.get().load(recipeModel.photoUrl).into(binding.imgRecipe)
-        }
-    }
-
-    private fun setCurrentFragment(fragment: Fragment) {
-        requireActivity().supportFragmentManager.beginTransaction().apply {
-            replace(R.id.frameLayoutFragment, fragment)
-            commit()
         }
     }
 
