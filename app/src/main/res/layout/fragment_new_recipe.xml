@@ -9,21 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="5dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvRecipeTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/secondary"
+                android:background="@color/grey_app"
                 android:padding="8dp"
                 android:text="@string/newRecipe_recipeTitle"
-                android:textColor="@color/titleText"
+                android:textColor="@color/surface"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -42,10 +40,10 @@
                 android:id="@+id/tvRecipeCuisine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/secondary"
+                android:background="@color/grey_app"
                 android:padding="8dp"
                 android:text="@string/newRecipe_RecipeCuisine"
-                android:textColor="@color/titleText"
+                android:textColor="@color/surface"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -58,16 +56,17 @@
                 android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="@color/background"
+                android:textColorHint="@color/hintText"
                 android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvRecipeDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/secondary"
+                android:background="@color/grey_app"
                 android:padding="8dp"
                 android:text="@string/newRecipe_RecipeDescription"
-                android:textColor="@color/titleText"
+                android:textColor="@color/surface"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -89,10 +88,10 @@
                 android:id="@+id/tvRecipeIngredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/secondary"
+                android:background="@color/grey_app"
                 android:padding="8dp"
                 android:text="@string/newRecipe_RecipeIngredients"
-                android:textColor="@color/titleText"
+                android:textColor="@color/surface"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -114,10 +113,10 @@
                 android:id="@+id/tvRecipeDirections"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/secondary"
+                android:background="@color/grey_app"
                 android:padding="8dp"
                 android:text="@string/newRecipe_RecipeDirections"
-                android:textColor="@color/titleText"
+                android:textColor="@color/surface"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -139,10 +138,10 @@
                 android:id="@+id/tvRecipeTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/secondary"
+                android:background="@color/grey_app"
                 android:padding="8dp"
                 android:text="@string/newRecipe_RecipeTime"
-                android:textColor="@color/titleText"
+                android:textColor="@color/surface"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -161,10 +160,10 @@
                 android:id="@+id/recipeImg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/secondary"
+                android:background="@color/grey_app"
                 android:padding="8dp"
                 android:text="@string/newRecipe_recipeImg"
-                android:textColor="@color/titleText"
+                android:textColor="@color/surface"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -186,6 +185,8 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="16dp"
                 android:padding="8dp"
+                android:backgroundTint="@color/grey_app"
+                android:textColor="@color/surface"
                 android:text="@string/newRecipe_save" />
 
         </LinearLayout>

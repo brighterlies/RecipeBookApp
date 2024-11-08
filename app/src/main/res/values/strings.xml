@@ -2,7 +2,6 @@
     <string name="app_name">RecipeBookApp</string>
     <string name="app_name_clean">Recipe Book App</string>
     <string name="search">Search</string>
-    <string name="recipes">Recipes</string>
     <string name="newRecipe_recipeTitle">Recipe Title:</string>
     <string name="newRecipe_etTitle">Recipe Title Here</string>
     <string name="newRecipe_recipeImg">Image Url:</string>
@@ -15,15 +14,18 @@
     <string name="newRecipe_RecipeDirections">Recipe  Directions:</string>
     <string name="newRecipe_etDirections">Recipe Directions Here</string>
     <string name="newRecipe_RecipeCuisine">Recipe Cuisine:</string>
-    <string name="newRecipe_etCuisine">Asian</string>
     <string name="newRecipe_spinnerCuisine">Choose a Cuisine</string>
     <string name="recipe_image_desc">Recipe Image</string>
     <string name="search_hint">Search here</string>
     <string name="add">Add recipe\n</string>
-    <string name="back">back page</string>
     <string name="newRecipe_RecipeTime">Recipe Time:</string>
     <string name="newRecipe_etTime">Recipe Time Here</string>
     <string name="home">Home</string>
+    <string name="tvRecipeTime">Time:</string>
+    <string name="tvRecipeDescription">RECIPE DESCRIPTION</string>
+    <string name="tvRecipeCuisine">Cuisine</string>
+    <string name="tvRecipeIngredientsLabel">Ingredients</string>
+    <string name="tvRecipeDirectionsLabel">Directions</string>
     <string-array name="cuisine_array">
         <item>""</item>
         <item>American</item>

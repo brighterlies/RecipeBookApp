@@ -15,5 +15,5 @@ class RecipeViewModel : ViewModel() {
     suspend fun deleteRecipe(recipeModel: RecipeModel) = recipeRepositoryImp.deleteRecipe(recipeModel)
     suspend fun deleteAllRecipes() = recipeRepositoryImp.deleteAllRecipes()
 
-    suspend fun filterRecipesList(charSequence: CharSequence) = recipeRepositoryImp.filterRecipesList(charSequence)
+    suspend fun searchRecipe(charSequence: CharSequence) = recipeRepositoryImp.searchRecipe(charSequence)
 }

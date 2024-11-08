@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="grey_app">#19232E</color>
-    <color name="primary">#FFD0BCFF</color>
-    <color name="secondary">#FFCCC2DC</color>
-    <color name="tertiary">#FFEFB8C8</color>
     <color name="background">#FF434343</color>
     <color name="surface">#FFF0F0F0</color>
     <color name="hintText">#78909C</color>
-    <color name="titleText">#546E7A</color>
-    <color name="textView">#78909C</color>
-    <color name="textColor">#7986CB</color>
-    <color name="fullColor">#616161</color>
 </resources>

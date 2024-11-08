@@ -18,6 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/grey_app"
             android:padding="4dp">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -36,7 +37,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:textColor="@color/textView"
+                android:textColor="@color/surface"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/imgRecipe"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:maxLines="4"
-                android:textColor="@color/textView"
+                android:textColor="@color/surface"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imgRecipe"
                 app:layout_constraintTop_toBottomOf="@id/tvRecipeTitle"

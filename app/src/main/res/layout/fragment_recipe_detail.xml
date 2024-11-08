@@ -35,14 +35,14 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end|bottom"
                     android:layout_margin="16dp"
-                    android:background="@color/surface">
+                    android:background="@color/grey_app">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Time:"
-                        android:textColor="@color/textColor"
+                        android:text="@string/tvRecipeTime"
+                        android:textColor="@color/surface"
                         android:textSize="20sp"
                         android:textStyle="italic|bold" />
 
@@ -50,7 +50,7 @@
                         android:id="@+id/tvRecipeTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/fullColor"
+                        android:textColor="@color/surface"
                         android:textSize="20sp"
                         android:textStyle="italic|bold"
                         tools:text="30 min" />
@@ -63,9 +63,9 @@
                 android:id="@+id/tvRecipeTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/surface"
+                android:background="@color/grey_app"
                 android:paddingVertical="8dp"
-                android:textColor="@color/textColor"
+                android:textColor="@color/surface"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="RECIPE TITLE" />
@@ -74,10 +74,10 @@
                 android:id="@+id/tvRecipeDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/surface"
+                android:background="@color/grey_app"
                 android:paddingBottom="8dp"
-                android:text="RECIPE DESCRIPTION"
-                android:textColor="@color/fullColor"
+                android:text="@string/tvRecipeDescription"
+                android:textColor="@color/surface"
                 android:textSize="16sp" />
 
             <com.google.android.material.chip.Chip
@@ -85,9 +85,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:background="@color/surface"
-                android:text="Cuisine"
-                android:textColor="@color/tertiary"
+                android:background="@color/grey_app"
+                android:text="@string/tvRecipeCuisine"
+                android:textColor="@color/grey_app"
                 android:textSize="14sp"
                 app:chipCornerRadius="8dp" />
 
@@ -95,11 +95,11 @@
                 android:id="@+id/tvRecipeIngredientsLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/surface"
+                android:background="@color/grey_app"
                 android:paddingTop="16dp"
                 android:paddingBottom="4dp"
-                android:text="Ingredients"
-                android:textColor="@color/textColor"
+                android:text="@string/tvRecipeIngredientsLabel"
+                android:textColor="@color/surface"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -107,20 +107,20 @@
                 android:id="@+id/tvRecipeIngredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/surface"
+                android:background="@color/grey_app"
                 android:paddingBottom="8dp"
-                android:textColor="@color/fullColor"
+                android:textColor="@color/surface"
                 android:textSize="16sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvRecipeDirectionsLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/surface"
+                android:background="@color/grey_app"
                 android:paddingTop="16dp"
                 android:paddingBottom="4dp"
-                android:text="Directions"
-                android:textColor="@color/textColor"
+                android:text="@string/tvRecipeDirectionsLabel"
+                android:textColor="@color/surface"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -128,9 +128,9 @@
                 android:id="@+id/tvRecipeDirections"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/surface"
+                android:background="@color/grey_app"
                 android:paddingBottom="8dp"
-                android:textColor="@color/fullColor"
+                android:textColor="@color/surface"
                 android:textSize="16sp" />
 
         </LinearLayout>

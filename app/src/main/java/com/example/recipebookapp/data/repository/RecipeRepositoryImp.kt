@@ -86,10 +86,7 @@ class RecipeRepositoryImp : RecipeRepository {
         }
     }
 
-    suspend fun filterRecipesList(charSequence: CharSequence): LiveData<List<RecipeModel>> {
-        println("Secuencia de letra, mostrada desde el viewModel")
-        println(charSequence)
-
+    suspend fun searchRecipe(charSequence: CharSequence): LiveData<List<RecipeModel>> {
         withContext(Dispatchers.IO) {
             var recipeFromDatabase = RecipeBookApp.database.recipeDao().getAllRecipes()
             val recipesFiltered = recipeFromDatabase.filter { recipe ->

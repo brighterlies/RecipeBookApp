@@ -1,18 +1,19 @@
 package com.example.recipebookapp.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recipebookapp.R
 import com.example.recipebookapp.databinding.FragmentRecipeListBinding
-import com.example.recipebookapp.view.activity.MainActivity
 import com.example.recipebookapp.view.adapter.RecipeListAdapter
 import com.example.recipebookapp.viewmodel.RecipeViewModel
 import kotlinx.coroutines.launch
@@ -48,6 +49,12 @@ class RecipeListFragment : Fragment() {
         deleteRecipe()
         binding.fabNewRecipe.setOnClickListener {
             navigateToNewRecipeFragment()
+        }
+        binding.fabSearch.setOnClickListener {
+            binding.etSearch.visibility = View.VISIBLE
+        }
+        binding.etSearch.setOnClickListener {
+            searchRecipe()
         }
         navigateToDetailRecipe()
     }
@@ -87,6 +94,27 @@ class RecipeListFragment : Fragment() {
             recipeDetailFragment.arguments = bundle
             setCurrentFragment(recipeDetailFragment)
         }
+    }
+
+    private fun searchRecipe() {
+        binding.etSearch.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(char: CharSequence?, start: Int, before: Int, count: Int) {
+                if (char != null) {
+                    lifecycleScope.launch {
+                        val recipeList = recipeListViewModel.searchRecipe(char.toString()).value ?: emptyList()
+                        recipeListAdapter.setRecipeList(recipeList)
+                    }
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+        })
     }
 
     private fun setCurrentFragment(fragment: Fragment) {
